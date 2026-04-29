@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4b7dc10b010a248f4e1f1c495e98cf39 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4b7dc10b010a248f4e1f1c495e98cf39" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4b7dc10b010a248f4e1f1c495e98cf39 = L.map(
+                "map_4b7dc10b010a248f4e1f1c495e98cf39",
+                {
+                    center: [40.74, -73.99],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_34a4f7d04b226d94ed046acf84d4d20d = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_34a4f7d04b226d94ed046acf84d4d20d.addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var marker_bb9f9a10c9ebc4c1fd6fbd1fd0036af1 = L.marker(
+                [40.7149, -74.0143],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_a99aaeb645fc1c70af4438fb8b63eed1 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #1A6BA8;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eGoldman\u003cbr\u003eSachs\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_58b43ab03682550bc2b1d6e82680390c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e01728382065a1a9cb8256fb3e31fba9 = $(`<div id="html_e01728382065a1a9cb8256fb3e31fba9" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#1A6BA8; font-size:14px;">Goldman Sachs</strong><br>         <span style="color:#555; font-size:12px;">📍 200 West St</span>     </div>     </div>`)[0];
+                popup_58b43ab03682550bc2b1d6e82680390c.setContent(html_e01728382065a1a9cb8256fb3e31fba9);
+            
+        
+
+        marker_bb9f9a10c9ebc4c1fd6fbd1fd0036af1.bindPopup(popup_58b43ab03682550bc2b1d6e82680390c)
+        ;
+
+        
+    
+    
+            marker_bb9f9a10c9ebc4c1fd6fbd1fd0036af1.bindTooltip(
+                `<div>
+                     Goldman Sachs
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bb9f9a10c9ebc4c1fd6fbd1fd0036af1.setIcon(div_icon_a99aaeb645fc1c70af4438fb8b63eed1);
+            
+    
+            var marker_ab9a781014a49e78a3f1ea8fdce79a43 = L.marker(
+                [40.7559, -73.9756],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_b740b23d51324e3c1df1b07ee2f01687 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #CC2929;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eJPMorgan\u003cbr\u003eChase\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_f4403420dedc44d6534e0cced286da2a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_78b5caa81f61fb5bdf30a3617846e762 = $(`<div id="html_78b5caa81f61fb5bdf30a3617846e762" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#CC2929; font-size:14px;">JPMorgan Chase</strong><br>         <span style="color:#555; font-size:12px;">📍 270 Park Ave</span>     </div>     </div>`)[0];
+                popup_f4403420dedc44d6534e0cced286da2a.setContent(html_78b5caa81f61fb5bdf30a3617846e762);
+            
+        
+
+        marker_ab9a781014a49e78a3f1ea8fdce79a43.bindPopup(popup_f4403420dedc44d6534e0cced286da2a)
+        ;
+
+        
+    
+    
+            marker_ab9a781014a49e78a3f1ea8fdce79a43.bindTooltip(
+                `<div>
+                     JPMorgan Chase
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ab9a781014a49e78a3f1ea8fdce79a43.setIcon(div_icon_b740b23d51324e3c1df1b07ee2f01687);
+            
+    
+            var marker_9fcfff1c74dac69fc3c3b6821037b71c = L.marker(
+                [40.7598, -73.9855],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_1e1191305755c0b3dc8f19f65e99c224 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #003B6F;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eMorgan\u003cbr\u003eStanley\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_140125a72a9428ea0a9c75c9be442ae9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_665e17757ba0d4035fb7c73b15121b9e = $(`<div id="html_665e17757ba0d4035fb7c73b15121b9e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#003B6F; font-size:14px;">Morgan Stanley</strong><br>         <span style="color:#555; font-size:12px;">📍 1585 Broadway</span>     </div>     </div>`)[0];
+                popup_140125a72a9428ea0a9c75c9be442ae9.setContent(html_665e17757ba0d4035fb7c73b15121b9e);
+            
+        
+
+        marker_9fcfff1c74dac69fc3c3b6821037b71c.bindPopup(popup_140125a72a9428ea0a9c75c9be442ae9)
+        ;
+
+        
+    
+    
+            marker_9fcfff1c74dac69fc3c3b6821037b71c.bindTooltip(
+                `<div>
+                     Morgan Stanley
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9fcfff1c74dac69fc3c3b6821037b71c.setIcon(div_icon_1e1191305755c0b3dc8f19f65e99c224);
+            
+    
+            var marker_278abdd39f45f7d3daf6be2323ebe565 = L.marker(
+                [40.7207, -74.0112],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_60fef1f85f4e9e11ca92cd89d9f7c71d = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #0066A1;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eCitigroup\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_07d6a6290f35902a2f31f7932b26925b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_79025573191216f60ecd5562f47059c6 = $(`<div id="html_79025573191216f60ecd5562f47059c6" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#0066A1; font-size:14px;">Citigroup</strong><br>         <span style="color:#555; font-size:12px;">📍 388 Greenwich St</span>     </div>     </div>`)[0];
+                popup_07d6a6290f35902a2f31f7932b26925b.setContent(html_79025573191216f60ecd5562f47059c6);
+            
+        
+
+        marker_278abdd39f45f7d3daf6be2323ebe565.bindPopup(popup_07d6a6290f35902a2f31f7932b26925b)
+        ;
+
+        
+    
+    
+            marker_278abdd39f45f7d3daf6be2323ebe565.bindTooltip(
+                `<div>
+                     Citigroup
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_278abdd39f45f7d3daf6be2323ebe565.setIcon(div_icon_60fef1f85f4e9e11ca92cd89d9f7c71d);
+            
+    
+            var marker_5416146001a6c3c782ddfce0da94dfb7 = L.marker(
+                [40.7556, -73.9849],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_9f3718e17b06568d0e01ed1f6488c2ae = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #E31837;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eBank\u003cbr\u003eof\u003cbr\u003eAmerica\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_b5c78f391a201d8cb4d10983298d16c0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_26c350a434462b199b1638995ae6821a = $(`<div id="html_26c350a434462b199b1638995ae6821a" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#E31837; font-size:14px;">Bank of America</strong><br>         <span style="color:#555; font-size:12px;">📍 One Bryant Park</span>     </div>     </div>`)[0];
+                popup_b5c78f391a201d8cb4d10983298d16c0.setContent(html_26c350a434462b199b1638995ae6821a);
+            
+        
+
+        marker_5416146001a6c3c782ddfce0da94dfb7.bindPopup(popup_b5c78f391a201d8cb4d10983298d16c0)
+        ;
+
+        
+    
+    
+            marker_5416146001a6c3c782ddfce0da94dfb7.bindTooltip(
+                `<div>
+                     Bank of America
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5416146001a6c3c782ddfce0da94dfb7.setIcon(div_icon_9f3718e17b06568d0e01ed1f6488c2ae);
+            
+    
+            var marker_b0bb0499fad2d00faae98845fb92ea1a = L.marker(
+                [40.7605, -73.9829],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_25b49d55fa68f89083d52d36fee2b72c = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #00AEEF;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eBarclays\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_d1a5fb936e30ef61d4775c38301fc82d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_201c160b2f573c1a0e600b49bf6c4840 = $(`<div id="html_201c160b2f573c1a0e600b49bf6c4840" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#00AEEF; font-size:14px;">Barclays</strong><br>         <span style="color:#555; font-size:12px;">📍 745 7th Ave</span>     </div>     </div>`)[0];
+                popup_d1a5fb936e30ef61d4775c38301fc82d.setContent(html_201c160b2f573c1a0e600b49bf6c4840);
+            
+        
+
+        marker_b0bb0499fad2d00faae98845fb92ea1a.bindPopup(popup_d1a5fb936e30ef61d4775c38301fc82d)
+        ;
+
+        
+    
+    
+            marker_b0bb0499fad2d00faae98845fb92ea1a.bindTooltip(
+                `<div>
+                     Barclays
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b0bb0499fad2d00faae98845fb92ea1a.setIcon(div_icon_25b49d55fa68f89083d52d36fee2b72c);
+            
+    
+            var marker_5c3610ade527ff211484edfed71d4d80 = L.marker(
+                [40.7683, -73.9832],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_ec6e4190d3f75c35872be71b95220ab6 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #0018A8;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eDeutsche\u003cbr\u003eBank\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_d62ef3462d047de9008a943a793630ae = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ee8a63b89be7a72ab17b271691c45db9 = $(`<div id="html_ee8a63b89be7a72ab17b271691c45db9" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#0018A8; font-size:14px;">Deutsche Bank</strong><br>         <span style="color:#555; font-size:12px;">📍 1 Columbus Circle</span>     </div>     </div>`)[0];
+                popup_d62ef3462d047de9008a943a793630ae.setContent(html_ee8a63b89be7a72ab17b271691c45db9);
+            
+        
+
+        marker_5c3610ade527ff211484edfed71d4d80.bindPopup(popup_d62ef3462d047de9008a943a793630ae)
+        ;
+
+        
+    
+    
+            marker_5c3610ade527ff211484edfed71d4d80.bindTooltip(
+                `<div>
+                     Deutsche Bank
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5c3610ade527ff211484edfed71d4d80.setIcon(div_icon_ec6e4190d3f75c35872be71b95220ab6);
+            
+    
+            var marker_9896ea70caa3b35f79c87dd3516dbb29 = L.marker(
+                [40.7589, -73.9792],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_18647ea855884b37837829d612f05660 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #8B6914;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eLazard\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_ca1d3b8cbd3a7501259f91c48ccb6194 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a790651d8dcfaf1fdea93c1d144eeb2f = $(`<div id="html_a790651d8dcfaf1fdea93c1d144eeb2f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#8B6914; font-size:14px;">Lazard</strong><br>         <span style="color:#555; font-size:12px;">📍 30 Rockefeller Plaza</span>     </div>     </div>`)[0];
+                popup_ca1d3b8cbd3a7501259f91c48ccb6194.setContent(html_a790651d8dcfaf1fdea93c1d144eeb2f);
+            
+        
+
+        marker_9896ea70caa3b35f79c87dd3516dbb29.bindPopup(popup_ca1d3b8cbd3a7501259f91c48ccb6194)
+        ;
+
+        
+    
+    
+            marker_9896ea70caa3b35f79c87dd3516dbb29.bindTooltip(
+                `<div>
+                     Lazard
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9896ea70caa3b35f79c87dd3516dbb29.setIcon(div_icon_18647ea855884b37837829d612f05660);
+            
+    
+            var marker_5ba41d791d845c6dc36053dfa4f3058b = L.marker(
+                [40.7613, -73.9802],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_3c9e8e3786d174eee27a7f80c36b4598 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #DD0000;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eUBS\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_eda140a6830052a165b040039e9e2b36 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ad764f70e8ea20bbd3638504ecfdbead = $(`<div id="html_ad764f70e8ea20bbd3638504ecfdbead" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#DD0000; font-size:14px;">UBS</strong><br>         <span style="color:#555; font-size:12px;">📍 1285 Ave of Americas</span>     </div>     </div>`)[0];
+                popup_eda140a6830052a165b040039e9e2b36.setContent(html_ad764f70e8ea20bbd3638504ecfdbead);
+            
+        
+
+        marker_5ba41d791d845c6dc36053dfa4f3058b.bindPopup(popup_eda140a6830052a165b040039e9e2b36)
+        ;
+
+        
+    
+    
+            marker_5ba41d791d845c6dc36053dfa4f3058b.bindTooltip(
+                `<div>
+                     UBS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5ba41d791d845c6dc36053dfa4f3058b.setIcon(div_icon_3c9e8e3786d174eee27a7f80c36b4598);
+            
+    
+            var marker_098950b0fe5d5afb57a93d1a34d957e6 = L.marker(
+                [40.7602, -73.9745],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_5e41867d7b9fc4744235247d85ebf682 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #B8960C;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eJefferies\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_4181c2ccd914a4543ec76bb2b5706f20 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_de05f38c368c0f418ad1da26454f9499 = $(`<div id="html_de05f38c368c0f418ad1da26454f9499" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#B8960C; font-size:14px;">Jefferies</strong><br>         <span style="color:#555; font-size:12px;">📍 520 Madison Ave</span>     </div>     </div>`)[0];
+                popup_4181c2ccd914a4543ec76bb2b5706f20.setContent(html_de05f38c368c0f418ad1da26454f9499);
+            
+        
+
+        marker_098950b0fe5d5afb57a93d1a34d957e6.bindPopup(popup_4181c2ccd914a4543ec76bb2b5706f20)
+        ;
+
+        
+    
+    
+            marker_098950b0fe5d5afb57a93d1a34d957e6.bindTooltip(
+                `<div>
+                     Jefferies
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_098950b0fe5d5afb57a93d1a34d957e6.setIcon(div_icon_5e41867d7b9fc4744235247d85ebf682);
+            
+    
+            var marker_969ccbee4fecbc471c0fb86407f1990f = L.marker(
+                [40.759, -73.9737],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_9858a844ebfea43d6a7fdd840c57b8f1 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #1B4F72;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eEvercore\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_9a9cc8cb538701419d956243272d2e25 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f0660a812090fb2de2d8d1833cb74c56 = $(`<div id="html_f0660a812090fb2de2d8d1833cb74c56" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#1B4F72; font-size:14px;">Evercore</strong><br>         <span style="color:#555; font-size:12px;">📍 55 E 52nd St</span>     </div>     </div>`)[0];
+                popup_9a9cc8cb538701419d956243272d2e25.setContent(html_f0660a812090fb2de2d8d1833cb74c56);
+            
+        
+
+        marker_969ccbee4fecbc471c0fb86407f1990f.bindPopup(popup_9a9cc8cb538701419d956243272d2e25)
+        ;
+
+        
+    
+    
+            marker_969ccbee4fecbc471c0fb86407f1990f.bindTooltip(
+                `<div>
+                     Evercore
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_969ccbee4fecbc471c0fb86407f1990f.setIcon(div_icon_9858a844ebfea43d6a7fdd840c57b8f1);
+            
+    
+            var marker_97b959b153b6c53f3de0ad05aa8349ea = L.marker(
+                [40.7139, -74.0147],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_103f0a699437efdcec0df0e6ab2495f0 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #005DAA;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eRBC\u003cbr\u003eCapital\u003cbr\u003eMarkets\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_3e84d78cd02fa0ed9813e3ac95e469eb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f4ec1df43d4b06efbdd23209f637b7a6 = $(`<div id="html_f4ec1df43d4b06efbdd23209f637b7a6" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#005DAA; font-size:14px;">RBC Capital Markets</strong><br>         <span style="color:#555; font-size:12px;">📍 200 Vesey St</span>     </div>     </div>`)[0];
+                popup_3e84d78cd02fa0ed9813e3ac95e469eb.setContent(html_f4ec1df43d4b06efbdd23209f637b7a6);
+            
+        
+
+        marker_97b959b153b6c53f3de0ad05aa8349ea.bindPopup(popup_3e84d78cd02fa0ed9813e3ac95e469eb)
+        ;
+
+        
+    
+    
+            marker_97b959b153b6c53f3de0ad05aa8349ea.bindTooltip(
+                `<div>
+                     RBC Capital Markets
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_97b959b153b6c53f3de0ad05aa8349ea.setIcon(div_icon_103f0a699437efdcec0df0e6ab2495f0);
+            
+    
+            var marker_814fbac4d9ebff0d9c5ccd770b69d078 = L.marker(
+                [40.7546, -73.9747],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_11714e70741b8b3fdd8087e126a0d412 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #2E7D32;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eHoulihan\u003cbr\u003eLokey\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_a388cced147641ab2b8c71eae0c8dd84 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_29d2d1aa8d4f977d05b543fdf94c4e3a = $(`<div id="html_29d2d1aa8d4f977d05b543fdf94c4e3a" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#2E7D32; font-size:14px;">Houlihan Lokey</strong><br>         <span style="color:#555; font-size:12px;">📍 245 Park Ave</span>     </div>     </div>`)[0];
+                popup_a388cced147641ab2b8c71eae0c8dd84.setContent(html_29d2d1aa8d4f977d05b543fdf94c4e3a);
+            
+        
+
+        marker_814fbac4d9ebff0d9c5ccd770b69d078.bindPopup(popup_a388cced147641ab2b8c71eae0c8dd84)
+        ;
+
+        
+    
+    
+            marker_814fbac4d9ebff0d9c5ccd770b69d078.bindTooltip(
+                `<div>
+                     Houlihan Lokey
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_814fbac4d9ebff0d9c5ccd770b69d078.setIcon(div_icon_11714e70741b8b3fdd8087e126a0d412);
+            
+    
+            var marker_a5cfe05adab606d1211c5edc7425c01c = L.marker(
+                [40.7592, -73.972],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_4c72b87b919e43f10331196f0875120e = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #6A0DAD;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eMoelis\u003cbr\u003e\u0026amp;\u003cbr\u003eCo.\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_00e75e3e6d9f4d6f9591e02d06f3bfb2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_74e5429e25d5edf46eb93be35dff8d40 = $(`<div id="html_74e5429e25d5edf46eb93be35dff8d40" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#6A0DAD; font-size:14px;">Moelis & Co.</strong><br>         <span style="color:#555; font-size:12px;">📍 399 Park Ave</span>     </div>     </div>`)[0];
+                popup_00e75e3e6d9f4d6f9591e02d06f3bfb2.setContent(html_74e5429e25d5edf46eb93be35dff8d40);
+            
+        
+
+        marker_a5cfe05adab606d1211c5edc7425c01c.bindPopup(popup_00e75e3e6d9f4d6f9591e02d06f3bfb2)
+        ;
+
+        
+    
+    
+            marker_a5cfe05adab606d1211c5edc7425c01c.bindTooltip(
+                `<div>
+                     Moelis & Co.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a5cfe05adab606d1211c5edc7425c01c.setIcon(div_icon_4c72b87b919e43f10331196f0875120e);
+            
+    
+            var marker_14b09d099423296c2456939d9ed36a7d = L.marker(
+                [40.758, -73.981],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_757498bf7789a5358ba0923c87fde875 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #8B0000;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eGuggenheim\u003cbr\u003ePartners\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_0c953a938a321f27c509cddb068d1552 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a1b567db50d0c90667cf3a5fed27f827 = $(`<div id="html_a1b567db50d0c90667cf3a5fed27f827" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#8B0000; font-size:14px;">Guggenheim Partners</strong><br>         <span style="color:#555; font-size:12px;">📍 330 Madison Ave</span>     </div>     </div>`)[0];
+                popup_0c953a938a321f27c509cddb068d1552.setContent(html_a1b567db50d0c90667cf3a5fed27f827);
+            
+        
+
+        marker_14b09d099423296c2456939d9ed36a7d.bindPopup(popup_0c953a938a321f27c509cddb068d1552)
+        ;
+
+        
+    
+    
+            marker_14b09d099423296c2456939d9ed36a7d.bindTooltip(
+                `<div>
+                     Guggenheim Partners
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_14b09d099423296c2456939d9ed36a7d.setIcon(div_icon_757498bf7789a5358ba0923c87fde875);
+            
+    
+            var marker_40ebd057f0abdb8dbf1ad1482e23de43 = L.marker(
+                [40.7527, -73.976],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_1ef7709282bea7e3452eae4cca9b7d1b = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #0079C1;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eBMO\u003cbr\u003eCapital\u003cbr\u003eMarkets\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_dde16643cf601889d9e5fbeadb4606e0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7a57b824e5d8c21a1ccf6f06f9b28c32 = $(`<div id="html_7a57b824e5d8c21a1ccf6f06f9b28c32" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#0079C1; font-size:14px;">BMO Capital Markets</strong><br>         <span style="color:#555; font-size:12px;">📍 151 W 42nd St</span>     </div>     </div>`)[0];
+                popup_dde16643cf601889d9e5fbeadb4606e0.setContent(html_7a57b824e5d8c21a1ccf6f06f9b28c32);
+            
+        
+
+        marker_40ebd057f0abdb8dbf1ad1482e23de43.bindPopup(popup_dde16643cf601889d9e5fbeadb4606e0)
+        ;
+
+        
+    
+    
+            marker_40ebd057f0abdb8dbf1ad1482e23de43.bindTooltip(
+                `<div>
+                     BMO Capital Markets
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_40ebd057f0abdb8dbf1ad1482e23de43.setIcon(div_icon_1ef7709282bea7e3452eae4cca9b7d1b);
+            
+    
+            var marker_a4d551971ff94773684998fc55b75536 = L.marker(
+                [40.7569, -73.9808],
+                {
+}
+            ).addTo(map_4b7dc10b010a248f4e1f1c495e98cf39);
+        
+    
+            var div_icon_ba7d678e7a47a0e9cc60cdd6b9899da9 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        background: #34A853;\n        color: white;\n        border: 3px solid white;\n        border-radius: 50%;\n        width: 44px;\n        height: 44px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        font-family: \u0027Arial\u0027, sans-serif;\n        font-size: 8px;\n        font-weight: 900;\n        text-align: center;\n        box-shadow: 0 3px 8px rgba(0,0,0,0.4);\n        line-height: 1.1;\n        letter-spacing: -0.3px;\n    \"\u003eTD\u003cbr\u003eSecurities\u003c/div\u003e\n    ",
+  "iconSize": [44, 44],
+  "iconAnchor": [22, 22],
+  "popupAnchor": [0, -22],
+  "className": "empty",
+});
+        
+    
+        var popup_4f3f9c7ca817dfd9f66f552e456b5ede = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4943fdc1658d14336a919d051a94d340 = $(`<div id="html_4943fdc1658d14336a919d051a94d340" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 160px; padding: 4px;">         <strong style="color:#34A853; font-size:14px;">TD Securities</strong><br>         <span style="color:#555; font-size:12px;">📍 1 Vanderbilt Ave</span>     </div>     </div>`)[0];
+                popup_4f3f9c7ca817dfd9f66f552e456b5ede.setContent(html_4943fdc1658d14336a919d051a94d340);
+            
+        
+
+        marker_a4d551971ff94773684998fc55b75536.bindPopup(popup_4f3f9c7ca817dfd9f66f552e456b5ede)
+        ;
+
+        
+    
+    
+            marker_a4d551971ff94773684998fc55b75536.bindTooltip(
+                `<div>
+                     TD Securities
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a4d551971ff94773684998fc55b75536.setIcon(div_icon_ba7d678e7a47a0e9cc60cdd6b9899da9);
+            
+</script>
+</html>
